@@ -1,8 +1,6 @@
-import { Application } from "pixi.js";
+import { initGame, gameStage } from "./game";
+import { Tank } from "./Tank";
 
-const game = new Application({
-  width: 500,
-  height: 500,
-});
-
-document.body.append(game.view);
+initGame();
+const tank = Tank.create();
+gameStage().addChild(tank);
